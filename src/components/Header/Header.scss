@@ -1,0 +1,78 @@
+.header {
+  display: flex;
+  position: sticky;
+  justify-content: center;
+  height: 200px;
+  max-width: 100%;
+  background-color: rgba(255, 255, 255, 0.6);
+  z-index: 100;
+
+  &__container {
+    margin-top: 44px;
+    padding-left: 60px;
+  
+
+    @media only screen and (max-width: 600px) {
+      margin-top: 0;
+      padding-left: 0;
+   }
+  }
+  
+  &__title {
+    font-size: 18px;
+    font-weight: 600;
+    margin-right: 20px;
+
+    @media only screen and (max-width: 600px) {
+      margin-right: 0;
+    }
+  }
+
+  &__badge {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 30px;
+    width: 148px;
+    border: solid 1px #65a1e0;
+    border-radius: 5px;
+    color: #65a1e0;
+    font-size: 12px;
+  }
+
+  &__info {
+    display: flex;
+    margin-top: 20px;
+
+    @media only screen and (max-width: 600px) {
+      flex-direction: column;
+      align-items: center;
+      margin-top: 15px;
+   }
+
+    &-item {
+      margin-right: 30px;
+    }
+
+    &-item span {
+      font-weight: 700;
+      padding-right: 6px;
+    }
+  }
+    
+  &__datepicker {
+    display: flex;
+    margin-top: 24px;
+
+    @media only screen and (max-width: 600px) {
+      position: absolute;
+      bottom: 15px;
+      left: 20px;
+     
+    }
+
+    &-title {
+      margin-right: 14px;
+    }
+  }
+}

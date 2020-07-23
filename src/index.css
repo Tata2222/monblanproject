@@ -1,13 +1,117 @@
+html,
+body,
+div,
+span,
+button,
+h1,
+h2,
+p,
+a,
+ol,
+img,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+input {
+  background: transparent;
+  border: 0;
+}
+
+button {
+  border: 0;
+  cursor: pointer;
+}
+
+:focus {
+  outline: none;
+}
+
 body {
+  position: relative;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  background-color: #fafafa;
+  width: 100vw;
+  overflow: hidden;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.main {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: -10;
+}
+
+.main__container {
+  max-width: 936px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 10px;
+  max-width: 98%;
+}
+
+@media only screen and (max-width: 400px) {
+  .main__container {
+    margin: 0;
+  }
+}
+
+.btn-panel {
+  align-self: flex-end;
+  margin-top: 20px;
+}
+
+.shape1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 715px;
+  height: 455px;
+  background-image: url(shape_1.png);
+  background-repeat: no-repeat;
+  background-size: 100%; 
+}
+
+.shape2 {
+  position: absolute;
+  bottom: 60px;
+  right: 0;
+  width: 238px;
+  height: 406px;
+  background-image: url(shape_2.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+@media only screen and (max-width: 720px) {
+  .shape1 {
+    right: 0;
+    left: auto;
+    background-image: url(shape_1.png);
+    background-repeat: no-repeat;
+    background-size: cover; 
+  }
+}
+
+.react-datepicker-wrapper {
+  width: 120px;
 }
